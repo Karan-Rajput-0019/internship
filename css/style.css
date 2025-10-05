@@ -1,0 +1,213 @@
+:root{
+  --pink:#e91e63;
+  --pink-100:#ffe4ec;
+  --text:#333;
+  --muted:#777;
+  --radius:12px;
+  --max-width:1440px;
+  --ff-sans: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--ff-sans);
+  color:var(--text);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:24px 80px;
+  border-bottom:1px solid #f0e6ea;
+  position:sticky;
+  top:0;
+  background:#fff;
+  z-index:1002;
+}
+
+.logo .company{
+  color:var(--pink);
+  font-weight:700;
+  font-size:1.4rem;
+}
+.logo .tagline{
+  color:#888;
+  margin-left:10px;
+  font-size:0.9rem;
+}
+
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-links a{
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
+  padding:6px 8px;
+  transition:color .2s ease, transform .12s ease;
+}
+.nav-links a:hover{color:var(--pink);transform:translateY(-2px)}
+
+.actions{display:flex;align-items:center}
+.quote-btn{
+  background:var(--pink);
+  color:#fff;
+  border:none;
+  padding:10px 18px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.quote-btn:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(233,30,99,0.12)}
+
+/* Hamburger (hidden on desktop) */
+.hamburger{
+  display:none;
+  background:transparent;
+  border:none;
+  position:fixed;
+  top:20px;
+  left:20px;
+  z-index:1003;
+  padding:8px;
+  cursor:pointer;
+}
+.hamburger span{
+  display:block;
+  width:28px;height:3px;margin:6px 0;background:var(--pink);border-radius:3px;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  padding:80px;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+.hero-text{max-width:640px}
+.hero-text h1{
+  font-size:2.6rem;
+  margin:0 0 16px 0;
+  color:var(--pink);
+  line-height:1.05;
+}
+.hero-text p{font-size:1.05rem;color:#444;margin:0 0 20px}
+
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.primary-btn, .secondary-btn{
+  padding:12px 20px;border-radius:10px;border:0;font-weight:700;cursor:pointer;
+  transition:all .22s ease;
+}
+.primary-btn{background:var(--pink);color:#fff}
+.primary-btn:hover{transform:scale(1.03);box-shadow:0 8px 24px rgba(233,30,99,0.12)}
+.secondary-btn{background:#fff;color:var(--pink);border:2px solid var(--pink)}
+.secondary-btn:hover{transform:scale(1.02)}
+
+.hero-image img{
+  width:400px;
+  max-width:100%;
+  border-radius:14px;
+  display:block;
+}
+
+/* rating badge */
+.rating-badge{
+  position:relative;
+  display:inline-block;
+  margin-top:18px;
+  background:#fff;
+  padding:10px 14px;
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  font-size:0.95rem;
+  color:var(--text);
+}
+.rating-badge.compact{display:flex;gap:12px;align-items:center}
+.rating-row{display:flex;align-items:center;gap:8px}
+
+/* ---------- FEATURES ---------- */
+.features{padding:80px 0;background:var(--pink-100)}
+.section-title{
+  text-align:center;
+  color:var(--pink);
+  font-size:1.9rem;
+  margin:0 0 36px;
+  line-height:1.25;
+}
+.feature-grid{
+  max-width:var(--max-width);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:32px;
+  padding:0 80px;
+}
+.feature-card{
+  background:#fff;padding:22px;border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(0,0,0,0.04);
+  transition:transform .28s ease, box-shadow .28s ease;
+  display:flex;flex-direction:column;gap:12px;align-items:flex-start;
+}
+.feature-card img{width:100%;height:140px;object-fit:contain;border-radius:8px}
+.feature-card h3{color:var(--pink);margin:0;font-size:1.05rem}
+.feature-card p{margin:0;color:#555;font-size:0.95rem}
+.feature-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,0.08)}
+
+/* ---------- FOOTER ---------- */
+.site-footer{background:var(--pink-100);padding:40px 24px;color:var(--text)}
+.footer-content{
+  max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;gap:24px;align-items:flex-start;
+}
+.footer-brand .company{color:var(--pink);font-weight:800;font-size:1.2rem}
+.footer-brand .tagline{color:#888;font-size:0.95rem;margin-left:8px}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{text-decoration:none;color:var(--text);font-weight:600}
+.footer-contact p{margin:6px 0}
+.footer-bottom{text-align:center;margin-top:24px;color:var(--muted);font-size:0.9rem}
+
+/* ---------- RESPONSIVE: TABLET & MOBILE ---------- */
+@media (max-width: 1024px){
+  .feature-grid{grid-template-columns:repeat(2,1fr);padding:0 40px}
+  .hero{padding:64px}
+}
+
+@media (max-width: 768px){
+  .nav-links{display:none}
+  .quote-btn{display:none}
+  .hamburger{display:block}
+
+  .navbar{padding:16px}
+  .hero{flex-direction:column;align-items:center;padding:40px 24px;text-align:center}
+  .hero-text h1{font-size:2.0rem}
+  .hero-text p{font-size:1rem}
+  .rating-badge{position:static;margin-top:18px;box-shadow:none;background:transparent;padding:0}
+
+  .feature-grid{grid-template-columns:1fr;padding:0 24px;gap:18px}
+  .feature-card img{height:120px}
+  .footer-content{flex-direction:column;align-items:center;text-align:center}
+  .footer-links{flex-direction:row;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+}
+
+/* Sidebar states */
+.sidebar{
+  position:fixed;left:-100%;top:0;height:100%;width:300px;background:var(--pink-100);padding:20px;box-shadow:4px 0 24px rgba(0,0,0,0.08);
+  transition:left .28s cubic-bezier(.2,.9,.2,1);z-index:1005;overflow:auto;
+}
+.sidebar.active{left:0}
+.sidebar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.close-btn{background:transparent;border:0;font-size:28px;color:var(--pink);cursor:pointer}
+.sidebar-links{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.sidebar-links a{text-decoration:none;color:var(--text);font-weight:700;padding:8px 6px;border-radius:6px}
+.sidebar-links a:hover{background:#ffd6e4}
+.contact-btn{margin-top:20px;background:var(--pink);color:#fff;border:0;padding:12px;border-radius:8px;width:100%;font-weight:800;cursor:pointer;transition:transform .18s ease}
+.contact-btn:hover{transform:scale(1.03)}

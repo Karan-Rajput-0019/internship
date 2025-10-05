@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>COMPANY — Resume Services</title>
+
+  <!-- AOS CSS for scroll animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Core stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="logo" aria-label="Company logo">
+      <span class="company">COMPANY</span>
+      <span class="tagline">business tagline</span>
+    </div>
+
+    <nav class="nav-links" role="navigation" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Our Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="actions">
+      <button class="quote-btn" id="getQuote">Get A Quote</button>
+    </div>
+
+    <!-- Hamburger for mobile -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- SIDEBAR (mobile) -->
+  <aside class="sidebar" id="sidebar" aria-hidden="true">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="company">COMPANY</span>
+        <span class="tagline">business tagline</span>
+      </div>
+      <button class="close-btn" id="closeSidebar" aria-label="Close menu">×</button>
+    </div>
+
+    <nav class="sidebar-links" role="navigation" aria-label="Mobile">
+      <a href="#home" class="sidebar-link">Home</a>
+      <a href="#about" class="sidebar-link">About Us</a>
+      <a href="#services" class="sidebar-link">Our Services</a>
+      <a href="#pricing" class="sidebar-link">Pricing</a>
+      <a href="#faq" class="sidebar-link">FAQ</a>
+    </nav>
+
+    <button class="contact-btn" id="contactUs">CONTACT US</button>
+  </aside>
+
+  <!-- PAGE CONTENT -->
+  <main id="home" tabindex="-1">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-text" data-aos="fade-right">
+        <h1 id="hero-heading">Your Resume Deserves A Yes</h1>
+        <p>If your resume isn’t getting responses, it’s time for an upgrade. Get an ATS-optimized resume crafted by elite experts to help you land more interviews.</p>
+
+        <div class="hero-buttons">
+          <button class="primary-btn" id="packagesBtn">Resume Packages</button>
+          <button class="secondary-btn" id="contactBtn">Contact Us</button>
+        </div>
+
+        <div class="rating-badge compact" aria-hidden="true" data-aos="fade-up">
+          <div class="rating-row">
+            <span class="star">⭐</span>
+            <span class="rating-text"><strong>4.9</strong> Instructor Rating</span>
+          </div>
+          <div class="rating-row">
+            <span class="doc">📄</span>
+            <span class="rating-text"><strong>260+</strong> Resumes Created</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image" data-aos="fade-left">
+        <img src="assets/images/hero-student.png" alt="Person holding a resume" width="400" height="320">
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" aria-labelledby="features-heading">
+      <h2 class="section-title" id="features-heading" data-aos="fade-up">You're Not Just Another Applicant<br>And Your Resume Shouldn't Look Like One</h2>
+
+      <div class="feature-grid">
+        <article class="feature-card" data-aos="zoom-in" data-aos-delay="0">
+          <img src="assets/images/resume-format.png" alt="" aria-hidden="true">
+          <h3>A Resume Format That Gets You Interviews</h3>
+          <p>Get a professionally written, keyword-optimized resume that lands in recruiter inboxes.</p>
+        </article>
+
+        <article class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="assets/images/cover-letter.png" alt="" aria-hidden="true">
+          <h3>A Cover Letter Style That Stands Out Strong</h3>
+          <p>Send a cover letter that speaks directly to the role and reflects your strengths.</p>
+        </article>
+
+        <article class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/images/linkedin-profile.png" alt="" aria-hidden="true">
+          <h3>A LinkedIn Profile That Works For You</h3>
+          <p>Attract the right eyes, start conversations, and show up in recruiter searches.</p>
+        </article>
+
+        <article class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+          <img src="assets/images/interview-strategy.png" alt="" aria-hidden="true">
+          <h3>An Interview Strategy That Builds Confidence</h3>
+          <p>Interview preparation with real HR professionals so you speak clearly and confidently.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="company">COMPANY</span>
+        <span class="tagline">business tagline</span>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Our Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="footer-contact" aria-label="Contact">
+        <p>📧 <a href="mailto:contact@company.com">contact@company.com</a></p>
+        <p>📞 <a href="tel:+919876543210">+91 98765 43210</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 COMPANY. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Core script -->
+  <script src="js/script.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 800,
+      offset: 120,
+      once: true
+    });
+  </script>
+</body>
+</html>
